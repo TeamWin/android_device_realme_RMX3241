@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 TeamWin Recovery Project
+# Copyright (C) 2022 TeamWin Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,15 +31,14 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/roo
 
 # Extra required packages
 PRODUCT_PACKAGES += \
-    libion.recovery \
-    android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery
+    fastbootd \
+    libion.recovery
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX3241
 PRODUCT_NAME := twrp_RMX3241
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := realme 8 5G
+PRODUCT_MODEL := RM6833
 PRODUCT_MANUFACTURER := realme
 
 # HACK: Set vendor patch level

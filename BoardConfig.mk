@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 TeamWin Recovery Project
+# Copyright (C) 2021-2022 TeamWin Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -74,8 +74,8 @@ BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_set_device
-TARGET_RECOVERY_DEVICE_MODULES := libinit_set_device
+TARGET_INIT_VENDOR_LIB := libinit_realme6833
+TARGET_RECOVERY_DEVICE_MODULES := libinit_realme6833
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := RMX3241,RMX3242
