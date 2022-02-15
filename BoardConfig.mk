@@ -42,7 +42,8 @@ TARGET_USES_UEFI := true
 TARGET_BOARD_PLATFORM := mt6833
 
 # Kernel
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -72,8 +73,12 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_set_device
+TARGET_RECOVERY_DEVICE_MODULES := libinit_set_device
+
 # Assert
-TARGET_OTA_ASSERT_DEVICE := RMX3241,RMX3242,RE513CL1
+TARGET_OTA_ASSERT_DEVICE := RMX3241,RMX3242
 
 # Crypto
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -118,9 +123,10 @@ TARGET_USES_MKE2FS := true
 
 # Dynamic Partitions
 BOARD_SUPER_PARTITION_SIZE := 10737418240
-BOARD_SUPER_PARTITION_GROUPS := main
-BOARD_MAIN_SIZE := 10737410048
-BOARD_MAIN_PARTITION_LIST := system vendor product odm
+BOARD_SUPER_PARTITION_GROUPS := google_dynamic_partitions
+BOARD_GOOGLE_DYNAMIC_PARTITIONS_SIZE := 10737410048
+BOARD_GOOGLE_DYNAMIC_PARTITIONS_LIST := \
+    system vendor product odm
 
 BOARD_SUPPRESS_SECURE_ERASE := true
 
@@ -148,8 +154,8 @@ TW_MAX_BRIGHTNESS := 4095
 TW_DEFAULT_BRIGHTNESS := 1024 # 25%
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_NO_SCREEN_BLANK := true
-
 TW_EXCLUDE_TWRPAPP := true
+
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
@@ -161,19 +167,6 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone4/temp
 TW_Y_OFFSET := 115
 TW_H_OFFSET := -115
 TW_EXCLUDE_APEX := true
-
-TW_OZIP_DECRYPT_KEY := 1C4C1EA3A12531AE491B21BB31613C11
-# oplus.fstab logical partitions
-TW_INCLUDE_LOGICAL := \
-          my_product \
-          my_engineering \
-          my_company \
-          my_carrier \
-          my_region \
-          my_heytap \
-          my_stock \
-          my_preload \
-          my_manifest
 
 # For debugging
 TWRP_INCLUDE_LOGCAT := true
