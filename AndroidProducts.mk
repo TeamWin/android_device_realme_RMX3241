@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_DIR)/init
-
 PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_RMX3241.mk
 
 COMMON_LUNCH_CHOICES := twrp_RMX3241-eng
