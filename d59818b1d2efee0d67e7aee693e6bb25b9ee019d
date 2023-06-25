@@ -17,6 +17,23 @@
       "message": "We don\u0027t have an official tree for android-13.1 yet.",
       "revId": "d59818b1d2efee0d67e7aee693e6bb25b9ee019d",
       "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6563de98_c5e0d809",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2023-06-25T16:44:16Z",
+      "side": 1,
+      "message": "It has been a year since the maintainer submitted updates. Do you want to take maintainership of this device?",
+      "revId": "d59818b1d2efee0d67e7aee693e6bb25b9ee019d",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
     }
   ]
 }
