@@ -69,6 +69,24 @@
       "message": "Woops, my bad. This ID is in the gerrit group for merging. Do you get the +2 option?",
       "revId": "d59818b1d2efee0d67e7aee693e6bb25b9ee019d",
       "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3606ee8_231ff505",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 709
+      },
+      "writtenOn": "2023-06-26T04:51:38Z",
+      "side": 1,
+      "message": "Yes, I have that option available.",
+      "parentUuid": "d7c65bd9_db8cf76e",
+      "revId": "d59818b1d2efee0d67e7aee693e6bb25b9ee019d",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
     }
   ]
 }
